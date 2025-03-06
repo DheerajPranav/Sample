@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Skin Cancer Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon1.ico" />
+
+</head>
+
+<body>
+    <main>
+    	<div class="jumbotron text-center">
+        	<h1>Skin Cancer Lesion Classifier</h1>
+    	</div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2" style="display:none">
+                        Loading Model
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <select id="model-selector" class="custom-select">
+                        <option selected disabled>Select Model</option>
+                        <option>Cancer</option>
+                        
+                    </select>
+                </div>
+                <div class="col-8">
+                    <input id="image-selector" class="form-control border-0" type="file">
+                </div>
+                <div class="col-1">
+                    <button id="predict-button" class="btn btn-primary float-right">Predict</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="ml-3">Predictions</h2>
+                    <ol id="prediction-list"></ol>
+                </div>
+                <div class="col-6">
+                    <h2 class="ml-3">Image</h2>
+                    <img id="selected-image" class="ml-3" src=""/>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h2></h2>
+            </div>
+            
+                <div class="col-6"> 
+                    <h2 class="ml-3">Key Words</h2>
+                    <ul>
+                        <li><h4>Melanoma</h4><p>Melanoma is a cancer that develops in melanocytes, the pigment cells present in the skin. It can be more serious than the other forms of skin cancer because of a tendency to spread to other parts of the body (metastasize) and cause serious illness and death.</p></li>
+                        <li><h4>Basal Cell Carcinoma</h4><p>Basal cell carcinoma is a cancer that grows on parts of your skin that get a lot of sun. It's the least risky type of skin cancer and is unlikely to spread to other parts of your body. (WebMD)</p></li>
+                        <li><h4>Squamous Cell Carcinoma</h4><p>Squamous cell carcinoma of the skin is a common form of skin cancer that develops in the squamous cells that make up the middle and outer layers of the skin.</p></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.0"></script>
+    
+    <script src="cancer_classes.js"></script>
+    <script src="predict.js"></script>
+     
+
+</body>
+
+</html>
