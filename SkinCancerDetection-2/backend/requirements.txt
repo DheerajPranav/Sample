@@ -1,0 +1,7 @@
+Flask
+numpy
+tensorflow
+keras
+p-utils
+p-image
+p-base64

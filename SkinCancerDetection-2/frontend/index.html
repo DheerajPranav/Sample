@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skin Cancer Detection</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <select id="modelSelect">
+            <option value="inception">InceptionV3</option>
+            <option value="resnet">ResNet101</option>
+            <option value="vgg">VGG16</option>
+        </select>
+        <button onclick="predict()">Predict</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
